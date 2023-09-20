@@ -23,7 +23,7 @@ public class EmployeeService {
         employeeDto.setFirstName(employee.getFirstName());
         employeeDto.setLastName(employee.getLastName());
         employeeDto.setGender(employee.getGender());
-
+        employeeDto.setOffice(employee.getOffice());
         return employeeDto;
     }
 
@@ -56,6 +56,8 @@ public class EmployeeService {
             throw new Exception("No such employee found");
         }
     }
+
+
 
     public void deleteEmployee(long id){
         employeeRepository.deleteById(id);

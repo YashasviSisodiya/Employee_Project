@@ -10,7 +10,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Employee {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
@@ -19,12 +18,16 @@ public class Employee {
     @Column(name = "FIRST_NAME")
     private String firstName;
 
-    @Column(name= "LAST_NAME")
+    @Column(name = "LAST_NAME")
     private String lastName;
 
-    @Column(name= "GENDER")
+    @Column(name = "GENDER")
     private char gender;
 
-    @Column(name= "DOB")
+    @Column(name = "DOB")
     private Date dob;
-}
+
+    @ManyToOne
+    private Office office;
+
+ }

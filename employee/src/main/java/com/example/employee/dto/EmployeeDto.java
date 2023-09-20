@@ -1,6 +1,7 @@
 package com.example.employee.dto;
 
 import java.util.Date;
+import com.example.employee.entity.Office;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,4 +14,5 @@ public class EmployeeDto {
     private String lastName;
     private char gender;
     private Date dob;
+    private Office office;
 }
